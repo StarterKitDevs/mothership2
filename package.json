@@ -1,0 +1,62 @@
+{
+  "name": "live-from-mothership",
+  "version": "1.0.0",
+  "description": "Modern, secure, and sustainable artist registration platform for Live From the Mothership music competition",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next out",
+    "export": "next build && next export",
+    "analyze": "ANALYZE=true npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "security-check": "npm audit --audit-level=moderate",
+    "setup": "cp .env.example .env.local && echo 'Please edit .env.local with your configuration'"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^14.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "music",
+    "competition",
+    "artist",
+    "registration",
+    "nextjs",
+    "supabase",
+    "typescript"
+  ],
+  "author": "Coalition DJs",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/live-from-mothership.git"
+  },
+  "homepage": "https://mothershiplive.com",
+  "bugs": {
+    "url": "https://github.com/your-username/live-from-mothership/issues"
+  }
+}
