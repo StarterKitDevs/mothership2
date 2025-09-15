@@ -60,3 +60,18 @@
     "url": "https://github.com/your-username/live-from-mothership/issues"
   }
 }
+{
+  "name": "live-from-mothership",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "serve .",
+    "dev": "serve ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0"
+  },
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
