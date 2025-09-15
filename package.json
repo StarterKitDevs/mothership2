@@ -4,9 +4,11 @@
   "description": "Modern, secure, and sustainable artist registration platform for Live From the Mothership music competition",
   "private": true,
   "scripts": {
-    "build": "echo 'Static site - no build step required'",
-    "start": "serve .",
-    "dev": "serve ."
+    "build": "mkdir -p public && cp index.html public/ && cp -r src public/ 2>/dev/null || cp index.html public/",
+    "start": "serve public",
+    "dev": "serve .",
+    "clean": "rm -rf public",
+    "deploy": "npm run build && vercel --prod"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.0"
@@ -15,14 +17,25 @@
     "serve": "^14.0.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
   "keywords": [
     "music",
     "competition",
     "artist",
-    "registration"
+    "registration",
+    "supabase",
+    "static-site"
   ],
   "author": "Coalition DJs",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarterKitDevs/mothership2.git"
+  },
+  "homepage": "https://mothershiplive.com",
+  "bugs": {
+    "url": "https://github.com/StarterKitDevs/mothership2/issues"
+  }
 }
